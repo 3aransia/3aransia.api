@@ -65,4 +65,4 @@ def translate_moroccan_arabic(moroccan_entry):
     return jsonify({'moroccan_translation_arabic' : moroccan_translation_arabic})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
