@@ -8,6 +8,7 @@ from api.algorithms import *
 from api.constants import *
 
 app = Flask(__name__)
+
 app.config['JSON_AS_ASCII'] = False
 
 moroccan_words = pd.read_csv(BASE_DIR + DATA_DIR + DICTIONARY_SAMPLE)
@@ -16,7 +17,7 @@ moroccan_words = moroccan_to_arabic(' '.join(moroccan_words["LDM"]))
 # Index
 @app.route('/', methods=['GET'])
 def hello_world():
-    return jsonify({'message' : 'Hello, World!'})
+    return jsonify({'message' : '3arania - The Moroccan Latin/Digit Language Framework'})
 
 # Get all the moroccan words
 @app.route('/moroccan_words', methods=['GET'])
@@ -56,6 +57,12 @@ def deleteOne(moroccan_word):
       if w['moroccan_word'] == moroccan_word:
         del moroccan_words[i]  
     return jsonify({'moroccan_words' : moroccan_words})
+
+# Translation moroccan to arabic
+@app.route('/translate_moroccan_arabic/<string:moroccan_entry>', methods=['GET'])
+def translate_moroccan_arabic(moroccan_entry):
+    moroccan_translation_arabic = moroccan_to_arabic(' '.join(moroccan_entry.split('+')))
+    return jsonify({'moroccan_translation_arabic' : moroccan_translation_arabic})
 
 if __name__ == "__main__":
     app.run(debug=True)
