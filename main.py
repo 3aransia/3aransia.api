@@ -62,7 +62,7 @@ def deleteOne(moroccan_word):
 @app.route('/translate_moroccan_arabic/<string:moroccan_entry>', methods=['GET'])
 def translate_moroccan_arabic(moroccan_entry):
     moroccan_translation_arabic = moroccan_to_arabic(' '.join(moroccan_entry.split('+')))
-    return jsonify({'moroccan_translation_arabic' : moroccan_translation_arabic})
+    return jsonify(moroccan_translation_arabic)
 
 if __name__ == "__main__":
     app.run(debug=True) 
