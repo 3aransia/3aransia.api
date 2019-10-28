@@ -1,4 +1,4 @@
-# 3aransia
+# 3aransia.api
 
 The Latin/Digit Moroccan Language Framework
 
