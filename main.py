@@ -4,14 +4,14 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-from api.algorithms import *
+from api.translator import *
 from api.constants import *
 
 app = Flask(__name__)
 
 app.config['JSON_AS_ASCII'] = False
 
-moroccan_words = pd.read_csv(BASE_DIR + DATA_DIR + DICTIONARY_SAMPLE)
+moroccan_words = pd.read_csv(BASE_DIR + DATA_DIR + OPEN_DICTIONARY_SAMPLE)
 moroccan_words = moroccan_to_arabic(' '.join(moroccan_words["LDM"]))
 
 # Index
