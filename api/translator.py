@@ -9,7 +9,8 @@ alphabet = pd.read_csv(BASE_DIR + DATA_DIR + MOROCCAN_ALPHABET)
 
 # Translate a Moroccan letter to an Arabian letter
 def morrocan_letter_to_arabian(letter, position): 
-    if letter == 'e' and position > 0: return ''
+    if letter == 'i' and position == 0: return 'إ'
+    elif letter == 'e' and position > 0: return ''
     else: return alphabet.loc[alphabet['MoroccanAlphabet'] == letter.lower()]['ArabianAlphabet'].values[0]
 
 # Translate Moroccan to Arabic
