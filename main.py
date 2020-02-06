@@ -4,15 +4,12 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-from api.translator import *
+from api.transliterator import *
 from api.constants import *
 
 app = Flask(__name__)
 
 app.config['JSON_AS_ASCII'] = False
-
-moroccan_words = pd.read_csv(BASE_DIR + DATA_DIR + OPEN_DICTIONARY_SAMPLE)
-moroccan_words = moroccan_to_arabic(' '.join(moroccan_words["LDM"]))
 
 # Index
 @app.route('/', methods=['GET'])
@@ -58,11 +55,21 @@ def deleteOne(moroccan_word):
         del moroccan_words[i]  
     return jsonify({'moroccan_words' : moroccan_words})
 
-# Translation moroccan to arabic
+# Transliteration moroccan to moroccan arabic
 @app.route('/translate_moroccan_arabic/<string:moroccan_entry>', methods=['GET'])
 def translate_moroccan_arabic(moroccan_entry):
-    moroccan_translation_arabic = moroccan_to_arabic(' '.join(moroccan_entry.split('+')))
-    return jsonify(moroccan_translation_arabic)
+    moroccan_entry = ' '.join(moroccan_entry.split('+'))
+    with open(BASE_DIR + DATA_DIR + USER_INPUT, 'a') as ui:
+        ui.write(f'{moroccan_entry},{moroccan_to_arabic(moroccan_entry)}\n')
+    return jsonify({'moroccan_transliteration': moroccan_to_arabic(moroccan_entry)})
 
+
+# Transliteration moroccan arabic to moroccan
+@app.route('/translate_arabic_moroccan/<string:moroccan_arabic_entry>', methods=['GET'])
+def translate_arabic_moroccan(moroccan_arabic_entry):
+    moroccan_arabic_entry = ' '.join(moroccan_arabic_entry.split('+'))
+    with open(BASE_DIR + DATA_DIR + USER_INPUT, 'a') as ui:
+        ui.write(f'{moroccan_arabic_entry},{arabic_to_moroccan(moroccan_arabic_entry)}\n')
+    return jsonify({'moroccan_arabic_transliteration': arabic_to_moroccan(moroccan_arabic_entry)})
 if __name__ == "__main__":
-    app.run(debug=True) 
+    app.run(debug=True)
