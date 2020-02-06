@@ -3,18 +3,8 @@ DATA_DIR = '/data'
 LOG_DIR = '/log'
 CURRENT_DIR = '.'
 
-CONTROLLED_DICTIONARY = '/controlled_dictionary.csv'
-OPEN_DICTIONARY = '/open_dictionary.csv'
-OPEN_DICTIONARY_SAMPLE = '/open_dictionary_sample.csv'
-TRANING_DATA = '/training_data.csv'
-MOROCCAN_ALPHABET = '/moroccan_alphabet.csv'
-
-ALPHABET_TEST_LOG_FILE = '/test_alphabet.log'
-WORD_TEST_LOG_FILE = '/test_word.log'
-SENTENCE_TEST_LOG_FILE = '/test_sentence.log'
-
-ARABIC_TRANSLATION_TEST_LOG_FILE = '/test_arabic_translation.log'
-FRENCH_TRANSLATION_TEST_LOG_FILE = '/test_french_translation.log'
-ENGLISH_TRANSLATION_TEST_LOG_FILE = '/test_english_translation.log'
+DICTIONARY_SAMPLE = '/dictionary_sample.csv'
+ALPHABET = '/alphabet.csv'
+USER_INPUT = '/user_input.csv'
 
 DOUBLE_MOROCCAN_LETTERS = ['la', 'kh', 'sh', 'ou', 'gh', 'ch', 'yi']
