@@ -10,7 +10,7 @@ app.config['JSON_AS_ASCII'] = False
 # Index
 @app.route('/', methods=['GET'])
 def hello_world():
-    return jsonify({'message' : '3arania - The Moroccan Latin/Digit Language Framework'})
+    return jsonify({'message' : '3arania - The Moroccan Latin/Digit Language Framework API'})
 
 # Transliteration moroccan to moroccan arabic
 @app.route('/transliterate_moroccan_route/<string:moroccan_entry>', methods=['GET'])
