@@ -31,7 +31,15 @@ The Latin/Digit Moroccan Language Framework API
 
 ### Public API
 
->```https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/```
+#### CORS Anywhere with heroku
+
+>```https://cors-anywhere.herokuapp.com/```
+
+#### API Link
+
+>```https://api3aransia.herokuapp.com/```
+
+#### Public Usage 
 
 >```https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya```
 ```
