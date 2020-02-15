@@ -11,19 +11,21 @@ The Latin/Digit Moroccan Language Framework API
 
 ### Routes
 
-```'/transliterate_moroccan_route/<string:moroccan_entry>'```
-```'/transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>'```
+> '/transliterate_moroccan_route/<string:moroccan_entry>' 
+> '/transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>' 
 
 ### Examples
 
->```/transliterate_moroccan_route/ktb+bl3rbya+hnaya```
-```
+> /transliterate_moroccan_route/ktb+bl3rbya+hnaya 
+
+```json
 {
   "moroccan_transliteration": "كتب بلعربيا هنايا"
 }
 ```
->```/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا```
-```
+
+> /transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا 
+```json
 {
   "moroccan_arabic_transliteration": "ktb blrbia hnaya"
 }
@@ -33,22 +35,25 @@ The Latin/Digit Moroccan Language Framework API
 
 #### CORS Anywhere with heroku
 
->```https://cors-anywhere.herokuapp.com/```
+> https://cors-anywhere.herokuapp.com/ 
 
 #### API Link
 
->```https://api3aransia.herokuapp.com/```
+> https://api3aransia.herokuapp.com/ 
 
 #### Public Usage 
 
->```https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya```
-```
+> https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya 
+
+```json
 {
   "moroccan_transliteration": "كتب بلعربيا هنايا"
 }
 ```
->```https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا```
-```
+
+> https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا 
+
+```json
 {
   "moroccan_arabic_transliteration": "ktb blrbia hnaya"
 }
