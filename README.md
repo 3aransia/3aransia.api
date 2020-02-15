@@ -11,8 +11,8 @@ The Latin/Digit Moroccan Language Framework API
 
 ### Routes
 
-```'/transliterate_moroccan/<string:moroccan_entry>'```
-```'/transliterate_arabic_moroccan/<string:moroccan_arabic_entry>'```
+```'/transliterate_moroccan_route/<string:moroccan_entry>'```
+```'/transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>'```
 
 ### Examples
 
