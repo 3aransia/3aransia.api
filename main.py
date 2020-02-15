@@ -1,7 +1,7 @@
 import json
 
 from flask import Flask, jsonify, request
-from aaransia import moroccan_to_arabic, moroccan_arabic_to_moroccan
+from aaransia import transliterate_moroccan, transliterate_moroccan_arabic
 
 app = Flask(__name__)
 
@@ -15,12 +15,12 @@ def hello_world():
 # Transliteration moroccan to moroccan arabic
 @app.route('/translate_moroccan_arabic/<string:moroccan_entry>', methods=['GET'])
 def translate_moroccan_arabic(moroccan_entry):
-    return jsonify({'moroccan_transliteration': moroccan_to_arabic(' '.join(moroccan_entry.split('+')))})
+    return jsonify({'moroccan_transliteration': transliterate_moroccan(' '.join(moroccan_entry.split('+')))})
 
 
 # Transliteration moroccan arabic to moroccan
 @app.route('/translate_arabic_moroccan/<string:moroccan_arabic_entry>', methods=['GET'])
 def translate_arabic_moroccan(moroccan_arabic_entry):
-    return jsonify({'moroccan_arabic_transliteration': moroccan_arabic_to_moroccan(' '.join(moroccan_arabic_entry.split('+')))})
+    return jsonify({'moroccan_arabic_transliteration': transliterate_moroccan_arabic(' '.join(moroccan_arabic_entry.split('+')))})
 if __name__ == "__main__":
     app.run(debug=True)
