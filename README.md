@@ -24,7 +24,7 @@ The Latin/Digit Moroccan Language Framework API
 }
 ```
 
-/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا]
+/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا
 
 ```json
 {
