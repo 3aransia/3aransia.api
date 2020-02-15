@@ -12,6 +12,7 @@ The Latin/Digit Moroccan Language Framework API
 ### Routes
 
 > '/transliterate_moroccan_route/<string:moroccan_entry>' 
+
 > '/transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>' 
 
 ### Examples
@@ -33,17 +34,13 @@ The Latin/Digit Moroccan Language Framework API
 
 ### Public API
 
-#### CORS Anywhere with heroku
-
-> https://cors-anywhere.herokuapp.com/ 
-
 #### API Link
 
 > https://api3aransia.herokuapp.com/ 
 
-#### Public Usage 
+#### Usage 
 
-> https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya 
+> https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya 
 
 ```json
 {
@@ -51,7 +48,7 @@ The Latin/Digit Moroccan Language Framework API
 }
 ```
 
-> https://cors-anywhere.herokuapp.com/https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا 
+> https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا 
 
 ```json
 {
