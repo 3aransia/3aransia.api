@@ -20,7 +20,7 @@ The Latin/Digit Moroccan Language Framework API
 
 ```json
 {
-  "moroccan_transliteration": "كتب بلعربيا هنايا"
+  "moroccan_arabic_transliteration": "كتب بلعربيا هنايا"
 }
 ```
 
@@ -28,7 +28,7 @@ The Latin/Digit Moroccan Language Framework API
 
 ```json
 {
-  "moroccan_arabic_transliteration": "ktb blrbia hnaya"
+  "moroccan_transliteration": "ktb blrbia hnaya"
 }
 ```
 
