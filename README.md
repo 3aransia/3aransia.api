@@ -48,17 +48,15 @@ https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya
 }
 ```
 
-https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا
+https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلعربيا+هنايا
 
 ```json
 {
-  "moroccan_arabic_transliteration": "ktb blrbia hnaya"
+  "moroccan_arabic_transliteration": "ktb bl3rbya hnaya"
 }
 ```
 
 ## Other related projects
 
-- [3aransia](https://github.com/3aransia/3aransia) The core of 3aransia
-- [3aransia.web](https://github.com/3aransia/3aransia.web) The web app of 3aransia
-- [3aransia.js](https://github.com/3aransia/3aransia.js) 3aransia in JS
-- [3aransia.datasets](https://github.com/3aransia/3aransia.datatsets) The datasets of 3aransia
+- [3aransia](https://pypi.org/project/aaransia/) The python library of 3aransia
+- [3aransia.web](http://3aransia.com) The web application of 3aransia
