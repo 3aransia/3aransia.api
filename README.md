@@ -44,7 +44,7 @@ https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya
 
 ```json
 {
-  "moroccan_transliteration": "كتب بلعربيا هنايا"
+  "moroccan_arabic_transliteration": "كتب بلعربيا هنايا"
 }
 ```
 
@@ -52,7 +52,7 @@ https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+ب�
 
 ```json
 {
-  "moroccan_arabic_transliteration": "ktb bl3rbya hnaya"
+  "moroccan_transliteration": "ktb bl3rbya hnaya"
 }
 ```
 
