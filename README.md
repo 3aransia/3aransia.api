@@ -11,24 +11,63 @@ Languages and Dialects transliteration 3aransia API
 
 ### Routes
 
-- /transliterate_moroccan_route/<string:moroccan_entry>
-- /transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>
+#### Get Alphabet codes route
 
-### Examples
+- ```/get_alphabets_codes_route/```: get alphabets codes route
 
-/transliterate_moroccan_route/ktb+bl3rbya+hnaya
+##### Example
+
+/get_alphabets_codes_route/
 
 ```json
 {
-  "moroccan_arabic_transliteration": "كتب بلعربيا هنايا"
+  "alphabets_codes": [
+    "ma", 
+    "ar", 
+    "la", 
+    "ab", 
+    "gr"
+  ]
 }
 ```
 
-/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا
+#### Get available languages
+
+- ```/get_alphabets_route/```: get alphabets route
+
+##### Example
+
+/get_alphabets_route/
 
 ```json
 {
-  "moroccan_transliteration": "ktb blrbia hnaya"
+  "alphabets": {
+    "ab": "Abjadi Alphabet", 
+    "ar": "Arabian Alphabet", 
+    "gr": "Greek Alphabet", 
+    "la": "Latin Alphabet", 
+    "ma": "Moroccan Alphabet"
+  }
+}
+```
+
+#### Transliteration route
+
+- ```/transliteration_route/```: transliteration route
+
+##### Params
+
+- ```text```: Text to translate
+- ```source-language```: source language code
+- ```target-language```: target language code
+
+##### Example
+
+/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
+
+```json
+{
+  "transliteration": "كتب بلعربيا هنايا"
 }
 ```
 
@@ -40,19 +79,11 @@ https://api3aransia.herokuapp.com/
 
 #### Usage 
 
-https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya
+https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
 
 ```json
 {
-  "moroccan_arabic_transliteration": "كتب بلعربيا هنايا"
-}
-```
-
-https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلعربيا+هنايا
-
-```json
-{
-  "moroccan_transliteration": "ktb bl3rbya hnaya"
+  "transliteration": "كتب بلعربيا هنايا"
 }
 ```
 
