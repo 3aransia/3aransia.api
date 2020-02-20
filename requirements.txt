@@ -1,4 +1,4 @@
-aaransia==0.12.1
+aaransia==0.16.2
 Click==7.0
 Flask==1.1.1
 gunicorn==20.0.4

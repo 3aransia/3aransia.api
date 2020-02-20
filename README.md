@@ -11,24 +11,21 @@ The Latin/Digit Moroccan Language Framework API
 
 ### Routes
 
-- /transliterate_moroccan_route/<string:moroccan_entry>
-- /transliterate_arabic_moroccan_route/<string:moroccan_arabic_entry>
+- ```/transliteration_route/```: transliteration route
+
+### Params
+
+- ```text```: Text to translate
+- ```source-language```: source language code
+- ```target-language```: target language code
 
 ### Examples
 
-/transliterate_moroccan_route/ktb+bl3rbya+hnaya
+/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
 
 ```json
 {
-  "moroccan_transliteration": "كتب بلعربيا هنايا"
-}
-```
-
-/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا
-
-```json
-{
-  "moroccan_arabic_transliteration": "ktb blrbia hnaya"
+  "transliteration": "كتب بلعربيا هنايا"
 }
 ```
 
@@ -40,7 +37,7 @@ https://api3aransia.herokuapp.com/
 
 #### Usage 
 
-https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya
+https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
 
 ```json
 {
@@ -48,17 +45,9 @@ https://api3aransia.herokuapp.com/transliterate_moroccan_route/ktb+bl3rbya+hnaya
 }
 ```
 
-https://api3aransia.herokuapp.com/transliterate_moroccan_arabic_route/كتب+بلربيا+هنايا
-
-```json
-{
-  "moroccan_arabic_transliteration": "ktb blrbia hnaya"
-}
-```
-
 ## Other related projects
 
-- [3aransia](https://github.com/3aransia/3aransia) The core of 3aransia
+- [3aransia](https://pypi.org/project/aaransia/) The core of 3aransia
 - [3aransia.web](https://github.com/3aransia/3aransia.web) The web app of 3aransia
 - [3aransia.js](https://github.com/3aransia/3aransia.js) 3aransia in JS
 - [3aransia.datasets](https://github.com/3aransia/3aransia.datatsets) The datasets of 3aransia
