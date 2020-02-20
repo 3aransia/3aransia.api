@@ -75,11 +75,11 @@ Languages and Dialects transliteration 3aransia API
 
 #### API Link
 
-https://api3aransia.herokuapp.com/
+(https://api3aransia.herokuapp.com/)[https://api3aransia.herokuapp.com/]
 
 #### Usage 
 
-https://api3aransia.herokuapp.com/get_alphabets_codes_route/
+(https://api3aransia.herokuapp.com/get_alphabets_codes_route/)[https://api3aransia.herokuapp.com/get_alphabets_codes_route/]
 
 ```json
 {
@@ -92,7 +92,7 @@ https://api3aransia.herokuapp.com/get_alphabets_codes_route/
   ]
 }
 ```
-https://api3aransia.herokuapp.com/get_alphabets_route
+(https://api3aransia.herokuapp.com/get_alphabets_route)[https://api3aransia.herokuapp.com/get_alphabets_route]
 
 ```json
 {
@@ -106,7 +106,7 @@ https://api3aransia.herokuapp.com/get_alphabets_route
 }
 ```
 
-https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
+(https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar)[https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar]
 
 ```json
 {
