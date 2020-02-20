@@ -11,15 +11,57 @@ Languages and Dialects transliteration 3aransia API
 
 ### Routes
 
+#### Get Alphabet codes route
+
+- ```/get_alphabets_codes_route/```: get alphabets codes route
+
+##### Example
+
+/get_alphabets_codes_route/
+
+```json
+{
+  "alphabets_codes": [
+    "ma", 
+    "ar", 
+    "la", 
+    "ab", 
+    "gr"
+  ]
+}
+```
+
+#### Get available languages
+
+- ```/get_alphabets_route/```: get alphabets route
+
+##### Example
+
+/get_alphabets_route/
+
+```json
+{
+  "alphabets": {
+    "ab": "Abjadi Alphabet", 
+    "ar": "Arabian Alphabet", 
+    "gr": "Greek Alphabet", 
+    "la": "Latin Alphabet", 
+    "ma": "Moroccan Alphabet"
+  }
+}
+```
+
+#### Transliteration route
+
 - ```/transliteration_route/```: transliteration route
 
-### Params
+##### Params
 
 - ```text```: Text to translate
 - ```source-language```: source language code
 - ```target-language```: target language code
 
-### Examples
+##### Example
 
 /transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
 
