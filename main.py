@@ -38,7 +38,8 @@ def transliteration_route():
         return jsonify({'transliteration':
                         transliterate(' '.join(request.args.get('text').split('+')),
                                       request.args.get('source-language'),
-                                      request.args.get('target-language'))})
+                                      request.args.get('target-language'),
+                                      universal=True)})
     except SourceLanguageException as sle:
         return jsonify({'sourceLanguageException': sle})
 
