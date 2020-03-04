@@ -11,7 +11,7 @@ app.config['JSON_AS_ASCII'] = False
 @app.route('/', methods=['GET'])
 def hello_world():
     """This is the base route function of 3aransia"""
-    return jsonify({'message' : '3arania - Languages and Dialects transliteration'})
+    return jsonify({'message' : '3arania - Transliteration of languages and dialects - 3aransia.com'})
 
 # Get alphabets codes route
 @app.route('/get_alphabets_codes_route/', methods=['GET'])
