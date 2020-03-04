@@ -11,7 +11,7 @@ app.config['JSON_AS_ASCII'] = False
 @app.route('/', methods=['GET'])
 def hello_world():
     """This is the base route function of 3aransia"""
-    return jsonify({'message' : '3arania - Languages and Dialects transliteration'})
+    return jsonify({'message' : '3arania - Transliteration of languages and dialects - 3aransia.com'})
 
 # Get alphabets codes route
 @app.route('/get_alphabets_codes_route/', methods=['GET'])
@@ -38,7 +38,8 @@ def transliteration_route():
         return jsonify({'transliteration':
                         transliterate(' '.join(request.args.get('text').split('+')),
                                       request.args.get('source-language'),
-                                      request.args.get('target-language'))})
+                                      request.args.get('target-language'),
+                                      universal=True)})
     except SourceLanguageException as sle:
         return jsonify({'sourceLanguageException': sle})
 
