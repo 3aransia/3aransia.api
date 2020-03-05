@@ -11,6 +11,27 @@ Transliteration of languages and dialects 3aransia API
 
 ### Routes
 
+
+#### Transliteration route
+
+- ```/transliteration_route/```: transliteration route
+
+##### Params
+
+- ```text```: Text to translate
+- ```source-language```: source language code
+- ```target-language```: target language code
+
+##### Example
+
+/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
+
+```json
+{
+  "transliteration": "كتب بلعربيا هنايا"
+}
+```
+
 #### Get Alphabet codes route
 
 - ```/get_alphabets_codes_route/```: get alphabets codes route
@@ -181,26 +202,6 @@ Transliteration of languages and dialects 3aransia API
 }
 ```
 
-#### Transliteration route
-
-- ```/transliteration_route/```: transliteration route
-
-##### Params
-
-- ```text```: Text to translate
-- ```source-language```: source language code
-- ```target-language```: target language code
-
-##### Example
-
-/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar
-
-```json
-{
-  "transliteration": "كتب بلعربيا هنايا"
-}
-```
-
 ### Public API
 
 #### API Link
@@ -208,6 +209,15 @@ Transliteration of languages and dialects 3aransia API
 [https://api3aransia.herokuapp.com/](https://api3aransia.herokuapp.com/)
 
 #### Usage 
+
+
+[https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar](https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar)
+
+```json
+{
+  "transliteration": "كتب بلعربيا هنايا"
+}
+```
 
 [https://api3aransia.herokuapp.com/get_alphabets_codes_route/](https://api3aransia.herokuapp.com/get_alphabets_codes_route/)
 
@@ -366,13 +376,6 @@ Transliteration of languages and dialects 3aransia API
 }
 ```
 
-[https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar](https://api3aransia.herokuapp.com/transliteration_route/?text=ktb+bl3rbya+hnaya&source-language=ma&target-language=ar)
-
-```json
-{
-  "transliteration": "كتب بلعربيا هنايا"
-}
-```
 
 ## Other related projects
 
