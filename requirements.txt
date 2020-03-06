@@ -1,4 +1,4 @@
-aaransia==0.81
+aaransia==0.82
 astroid==2.3.3
 Click==7.0
 Flask==1.1.1
